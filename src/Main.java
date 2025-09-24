@@ -2,7 +2,7 @@
 public class Main {
 ;
 	public static void main(String[] args) {
-		System.out.println("APENAS CADASTRAR");		
+		System.out.println("APENAS CADASTRAR ");		
 		
 
         // Arrays SIMPLES - só para testar o cadastro
