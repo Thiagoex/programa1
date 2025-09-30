@@ -30,7 +30,6 @@ public class Main {
         }
 
         System.out.println("Total cadastrado: " + total + " produtos");
-        System.out.println("Próxima fase: adicionar LISTAGEM");
 
         scanner.close();
 
