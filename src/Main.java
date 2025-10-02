@@ -1,6 +1,6 @@
 
 public class Main {
-;
+
 	public static void main(String[] args) {
 		System.out.println("APENAS CADASTRAR ");		
 		
@@ -21,7 +21,7 @@ public class Main {
             System.out.print("Nome: ");
             nomes[i] = scanner.nextLine();
 
-            System.out.print("Preço: R$ ");
+            System.out.print("Preco: R$ ");
             precos[i] = scanner.nextDouble();
             scanner.nextLine(); // limpar buffer
 
@@ -32,9 +32,14 @@ public class Main {
         System.out.println("Total cadastrado: " + total + " produtos");
         System.out.println("Próxima fase: adicionar LISTAGEM");
         
+        /*for (int i = 0; i < total; i++) {
+            System.out.println("\n--- Produto " + (i + 1) + " - " + nomes[i] +" - " +  precos[i]);
+            }*/
         for (int i = 0; i < total; i++) {
+            precos[i] = precos[i]*2;
             System.out.println("\n--- Produto " + (i + 1) + " - " + nomes[i] +" - " +  precos[i]);
             }
+
 
 
         scanner.close();
