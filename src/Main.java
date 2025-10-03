@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,7 +12,7 @@ public class Main {
         double[] precos = new double[5];
                 int total = 0;
 
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
 
         System.out.println("Vamos cadastrar 3 produtos para testar:");
