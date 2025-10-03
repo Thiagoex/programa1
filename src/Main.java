@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Main {
 
@@ -8,9 +9,10 @@ public class Main {
         // Arrays SIMPLES - só para testar o cadastro
         String[] nomes = new String[5];
         double[] precos = new double[5];
-        int total = 0;
+                int total = 0;
 
         java.util.Scanner scanner = new java.util.Scanner(System.in);
+        
 
         System.out.println("Vamos cadastrar 3 produtos para testar:");
 
@@ -32,18 +34,40 @@ public class Main {
         System.out.println("Total cadastrado: " + total + " produtos");
         System.out.println("Próxima fase: adicionar LISTAGEM");
         
-        /*for (int i = 0; i < total; i++) {
-            System.out.println("\n--- Produto " + (i + 1) + " - " + nomes[i] +" - " +  precos[i]);
-            }*/
         for (int i = 0; i < total; i++) {
-            precos[i] = precos[i]*2;
             System.out.println("\n--- Produto " + (i + 1) + " - " + nomes[i] +" - " +  precos[i]);
-            }
-
-
-
-        scanner.close();
+        }
+        try{
+        	// obtendo posição 
+        	System.out.println("Digite a posição (0 a 4) que deseja atualizar: ");
+        	int posicao = scanner.nextInt();
+	        //obtem o novo valor
+	        if (posicao >=0 && posicao <= total){
+	
+	            System.out.println("qual o novo valor para a posicao, ponei" + posicao + ":");
+	            int novoValor = scanner.nextInt();
+	            //atualiza o array
+	            precos[posicao] = novoValor;
+	            //
+	            System.out.println("Array atualizado:" + Arrays.toString(precos));
+	        } else{
+		            System.out.println("Erro: ponei digitou entrada invalida");
+			
+		    }
+	        scanner.close();
+        }catch(Exception e) {
+        	 System.out.println(e.getMessage());
+        }
+		       
+		          
+	        	
 
 	}
 
 }
+
+      
+
+	
+
+
