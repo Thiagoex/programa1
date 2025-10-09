@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,7 +12,7 @@ public class Main {
         double[] precos = new double[5];
                 int total = 0;
 
-        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
 
         System.out.println("Vamos cadastrar 3 produtos para testar:");
@@ -54,10 +55,39 @@ public class Main {
 		            System.out.println("Erro: ponei digitou entrada invalida");
 			
 		    }
-	        scanner.close();
+	        //scanner.close();
         }catch(Exception e) {
         	 System.out.println(e.getMessage());
         }
+        
+        // 🔹 DELETE
+        System.out.println("\nQual produto deseja remover? (digite o número)");
+        int indDelete = scanner.nextInt();
+        scanner.nextLine(); // limpar buffer
+
+        if (indDelete > 0 && indDelete <= total) {
+            int posicao = indDelete - 1;
+            System.out.println("Removendo: " + nomes[posicao]);
+
+            // desloca os elementos para "fechar o buraco"
+            for (int i = posicao; i < total - 1; i++) {
+                nomes[i] = nomes[i + 1];
+                precos[i] = precos[i + 1];
+            }
+
+            total--; // diminui a contagem de produtos
+            System.out.println("Produto removido com sucesso!");
+        } else {
+            System.out.println(" Número inválido!");
+        }
+
+        // Listagem final
+        System.out.println("\n=== LISTAGEM FINAL ===");
+        for (int i = 0; i < total; i++) {
+            System.out.println((i + 1) + " - " + nomes[i] + " | R$ " + precos[i]);
+        }
+        
+      
 		       
 		          
 	        	
@@ -65,6 +95,8 @@ public class Main {
 	}
 
 }
+
+
 
       
 
