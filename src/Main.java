@@ -55,7 +55,7 @@ public class Main {
 		            System.out.println("Erro: ponei digitou entrada invalida");
 			
 		    }
-	        //scanner.close();
+	        
         }catch(Exception e) {
         	 System.out.println(e.getMessage());
         }
